@@ -1,0 +1,154 @@
+/* Custom Styles */
+:root {
+    --clr-primary-1: #7541c8;
+    --clr-primary-2: #48556a;
+    --clr-primary-3: #19212e;
+    --clr-primary-4: #ffffff;
+  
+    --clr-neutral-1: #cfcfcf;
+    --clr-neutral-2: #ecf2f8;
+  
+    --ff-primary: 'Barlow Semi Condensed', sans-serif;
+  }
+  
+  /* Reset Styling */
+  *,
+  *::before,
+  *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 13px;
+  }
+  
+  img {
+      display: block;
+      max-width: 100%;
+  }
+  
+  /* Utility Styling */
+  .bg-purple {
+      background-color: #7541c8;
+  }
+  
+  .bg-gray {
+      background-color: #48556a;
+  }
+  
+  .bg-white {
+      background-color: #ffffff;
+  }
+  
+  .bg-black {
+      background-color: #19212e;
+  }
+  
+  .bg-quote {
+      background-image: url(./images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position: top right 5%;
+  }
+  
+  .text-white {
+      color: #ffffff;
+  }
+  
+  .text-black {
+      color: #19212e;
+  }
+  
+  .flex-container {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+  }
+  
+  /* Component Styling */
+  body {
+      font-family: var(--ff-primary);
+      background-color: var(--clr-neutral-2);
+      margin: 2rem;
+      min-height: 100vh;
+      display: grid;
+      place-content: center;
+  }
+  
+  .testimonials-grid {
+      display: grid;
+      gap: 1.5rem;
+  }
+  
+  .testimonial {
+      padding: 2rem;
+      border-radius: 7px;
+  }
+  
+  .testimonial > *:where(:not(:first-child)) {
+      margin-top: 1rem;
+  }
+  
+  .testimonial img {
+      width: 30px;
+      border-radius: 50%;
+  }
+  
+  .testimonial:nth-child(1) img,
+  .testimonial:nth-child(4) img {
+      border: 2px solid #a679ed;
+  }
+  
+  .testimonial:nth-child(2) img {
+      border: 2px solid #48556a;
+  }
+  
+  .flex-container p {
+      opacity: 0.5;
+  }
+  
+  .review {
+      opacity: 0.7;
+  }
+  
+  h2 {
+      font-size: 1.1rem;
+  }
+  
+  .flex-container p {
+      font-size: .9rem;
+  }
+  
+  .summary {
+      font-size: 1.4rem;
+  }
+  
+  .attribution {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .attribution p {
+      margin: 1rem .5rem;
+  }
+  
+  /* Responsive Styling */
+  @media (min-width: 850px) {
+  
+      .testimonials-grid {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          max-width: 1100px;
+      }
+  
+      .testimonial:last-child {
+          grid-column: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+      }
+  
+      .col-span-2 {
+          grid-column: span 2;
+      }
+  }
